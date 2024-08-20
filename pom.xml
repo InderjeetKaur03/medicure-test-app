@@ -102,7 +102,21 @@
         <plugin>
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
-        </plugin>
+        </plugin>        
+        <plugin>          
+          <artifactId>maven-assembly-plugin</artifactId>
+          <configuration>
+          <archive>
+          <manifest>
+          <mainClass>com.testing.medicure_test_app.App</mainClass>
+          </manifest>
+          </archive>
+          <descriptorRefs>
+          <decriptorRef>jar-with-dependencies</decriptorRef>
+          </descriptorRefs>
+          </configuration>
+        </plugin>       
+        
       </plugins>
     </pluginManagement>
   </build>
