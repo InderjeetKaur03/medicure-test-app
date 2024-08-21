@@ -3,6 +3,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 /**
  * Testing of medicure app
@@ -12,7 +13,10 @@ public class App
 {	
     public static void main( String[] args ) throws InterruptedException
     {
-    	WebDriver driver = new ChromeDriver();
+    	ChromeOptions options = new ChromeOptions();
+    	options.addArguments("--headless");
+    	
+    	WebDriver driver = new ChromeDriver(options);
 
     	//Opening Web Application
     			driver.get("http://99.79.49.186:8082/contact.html");
